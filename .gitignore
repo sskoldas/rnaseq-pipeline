@@ -1,5 +1,8 @@
 # Nextflow runtime
 work/
+.nextflow*
+.nextflow
+*.log
 
 # Pipeline outputs
 results/align/

@@ -1,0 +1,9 @@
+# Nextflow runtime
+work/
+
+# Pipeline outputs
+results/align/
+results/fastqc/
+results/trim_galore/
+results/multiqc/all_paired-end_data/
+results/multiqc/all_single-end_data/

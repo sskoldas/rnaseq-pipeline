@@ -1,0 +1,146 @@
+Sep-25 00:00:44.597 [main] DEBUG nextflow.cli.Launcher - $> nextflow run workflows/rnaseq_se.nf -resume
+Sep-25 00:00:44.667 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Sep-25 00:00:44.686 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/sskoldas/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Sep-25 00:00:44.702 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-25 00:00:44.702 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-25 00:00:44.705 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Sep-25 00:00:44.713 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-25 00:00:44.740 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/sskoldas/rnaseq-pipeline/nextflow.config
+Sep-25 00:00:44.743 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/sskoldas/rnaseq-pipeline/nextflow.config
+Sep-25 00:00:44.779 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/sskoldas/.nextflow/secrets/store.json
+Sep-25 00:00:44.782 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6bff19ff] - activable => nextflow.secret.LocalSecretsProvider@6bff19ff
+Sep-25 00:00:44.787 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-25 00:00:45.109 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-25 00:00:45.120 [main] DEBUG nextflow.cli.CmdRun - Launching `workflows/rnaseq_se.nf` [berserk_carlsson] DSL2 - revision: 81aa31bf43
+Sep-25 00:00:45.121 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-25 00:00:45.121 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-25 00:00:45.166 [main] DEBUG nextflow.Session - Session UUID: 5a315646-cfe1-4bb2-b9d0-f4cc34da22ba
+Sep-25 00:00:45.166 [main] DEBUG nextflow.Session - Run name: berserk_carlsson
+Sep-25 00:00:45.167 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-25 00:00:45.173 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-25 00:00:45.179 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sep-25 00:00:45.192 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (14:27 TRST)
+  System: Linux 6.8.0-83-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.16+8-Ubuntu-0ubuntu122.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 33221@sskoldas-Summit-E15-A11SCST [127.0.1.1]
+  CPUs: 8 - Mem: 62.5 GB (54.2 GB) - Swap: 31.2 GB (31.2 GB)
+Sep-25 00:00:45.215 [main] DEBUG nextflow.Session - Work-dir: /home/sskoldas/rnaseq-pipeline/work [ext2/ext3]
+Sep-25 00:00:45.216 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/sskoldas/rnaseq-pipeline/workflows/bin
+Sep-25 00:00:45.223 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-25 00:00:45.231 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-25 00:00:45.235 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Sep-25 00:00:45.255 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-25 00:00:45.262 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-25 00:00:45.308 [main] DEBUG nextflow.Session - Session start
+Sep-25 00:00:45.495 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-25 00:00:45.807 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-25 00:00:45.807 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-25 00:00:45.812 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-25 00:00:45.817 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=62.5 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-25 00:00:45.819 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-25 00:00:45.848 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC': maxForks=0; fair=false; array=0
+Sep-25 00:00:45.880 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-25 00:00:45.880 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-25 00:00:45.881 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'TRIM_GALORE': maxForks=0; fair=false; array=0
+Sep-25 00:00:45.886 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-25 00:00:45.886 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-25 00:00:45.887 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'HISAT2_BUILD': maxForks=0; fair=false; array=0
+Sep-25 00:00:45.905 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-25 00:00:45.905 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-25 00:00:45.906 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'HISAT2_ALIGN': maxForks=0; fair=false; array=0
+Sep-25 00:00:45.923 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-25 00:00:45.923 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-25 00:00:45.924 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Sep-25 00:00:45.927 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, HISAT2_BUILD, TRIM_GALORE, HISAT2_ALIGN, MULTIQC
+Sep-25 00:00:45.929 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Sep-25 00:00:45.934 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC
+Sep-25 00:00:45.935 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > TRIM_GALORE
+Sep-25 00:00:45.935 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > HISAT2_BUILD
+Sep-25 00:00:45.935 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > HISAT2_ALIGN
+Sep-25 00:00:45.936 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Sep-25 00:00:45.936 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_21addd5fea4b06c7: /home/sskoldas/rnaseq-pipeline/modules/trim_galore.nf
+  Script_6efbb5361ae5e891: /home/sskoldas/rnaseq-pipeline/modules/hisat2_align.nf
+  Script_49d5748f2cca3e01: /home/sskoldas/rnaseq-pipeline/modules/hisat2_build.nf
+  Script_6f166f544b4f97ba: /home/sskoldas/rnaseq-pipeline/modules/fastqc.nf
+  Script_f156df8b88c527e9: /home/sskoldas/rnaseq-pipeline/modules/multiqc.nf
+  Script_660fac9ee9481650: /home/sskoldas/rnaseq-pipeline/workflows/rnaseq_se.nf
+Sep-25 00:00:45.936 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-25 00:00:45.936 [main] DEBUG nextflow.Session - Session await
+Sep-25 00:00:46.025 [Actor Thread 17] DEBUG nextflow.conda.CondaCache - conda found local env for environment=hisat2=2.2.1; path=/home/sskoldas/rnaseq-pipeline/work/conda/env-d1af16f667aa911743ccacd5c265fa54
+Sep-25 00:00:46.025 [Actor Thread 19] DEBUG nextflow.conda.CondaCache - conda found local env for environment=fastqc=0.12.1; path=/home/sskoldas/rnaseq-pipeline/work/conda/env-d3b12ea84164cc521e82b56dc7f119d9
+Sep-25 00:00:46.025 [Actor Thread 18] DEBUG nextflow.conda.CondaCache - conda found local env for environment=trim-galore=0.6.10; path=/home/sskoldas/rnaseq-pipeline/work/conda/env-cccae30ea868ea4b2788210ce93a0001
+Sep-25 00:00:46.096 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.097 [Task submitter] INFO  nextflow.Session - [c1/1c52fe] Submitted process > FASTQC (4)
+Sep-25 00:00:46.107 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.116 [Task submitter] INFO  nextflow.Session - [30/cd49ac] Submitted process > FASTQC (1)
+Sep-25 00:00:46.123 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.125 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [cf/21aef1] Cached process > HISAT2_BUILD (1)
+Sep-25 00:00:46.127 [Task submitter] INFO  nextflow.Session - [df/529fdc] Submitted process > TRIM_GALORE (5)
+Sep-25 00:00:46.149 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.153 [Task submitter] INFO  nextflow.Session - [c0/c3947d] Submitted process > FASTQC (6)
+Sep-25 00:00:46.164 [Actor Thread 8] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sep-25 00:00:46.166 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.171 [Task submitter] INFO  nextflow.Session - [2f/cd3406] Submitted process > FASTQC (5)
+Sep-25 00:00:46.178 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.178 [Task submitter] INFO  nextflow.Session - [25/fa829a] Submitted process > TRIM_GALORE (1)
+Sep-25 00:00:46.186 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.189 [Task submitter] INFO  nextflow.Session - [29/e99195] Submitted process > FASTQC (3)
+Sep-25 00:00:46.196 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:46.200 [Task submitter] INFO  nextflow.Session - [4c/920398] Submitted process > TRIM_GALORE (6)
+Sep-25 00:00:51.562 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FASTQC (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/30/cd49ac33bd6ab6fbc8ddc8947aeebf]
+Sep-25 00:00:51.563 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sep-25 00:00:51.573 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:51.575 [Task submitter] INFO  nextflow.Session - [e6/77e33d] Submitted process > FASTQC (2)
+Sep-25 00:00:51.716 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: FASTQC (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/c1/1c52fe7a0f92b3a3a1d5220f57b892]
+Sep-25 00:00:51.735 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:51.736 [Task submitter] INFO  nextflow.Session - [f0/30965e] Submitted process > TRIM_GALORE (4)
+Sep-25 00:00:51.758 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: FASTQC (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/2f/cd340658d4abeefa15cb438e6d839f]
+Sep-25 00:00:51.781 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:51.782 [Task submitter] INFO  nextflow.Session - [a2/10f72a] Submitted process > TRIM_GALORE (2)
+Sep-25 00:00:51.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: FASTQC (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/c0/c3947d338c9fd5d04d144b4de92ffa]
+Sep-25 00:00:51.838 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:51.838 [Task submitter] INFO  nextflow.Session - [7b/be62ab] Submitted process > TRIM_GALORE (3)
+Sep-25 00:00:51.895 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FASTQC (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/29/e99195ad7f16f26d463f58d3eacf42]
+Sep-25 00:00:52.212 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: TRIM_GALORE (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/25/fa829a962d2f07cf26112591fe10ab]
+Sep-25 00:00:52.273 [Actor Thread 8] DEBUG nextflow.conda.CondaCache - conda found local env for environment=hisat2=2.2.1 samtools=1.20; path=/home/sskoldas/rnaseq-pipeline/work/conda/env-09bb0f2b2435240bfa8edc5eef9eae07
+Sep-25 00:00:52.292 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:52.292 [Task submitter] INFO  nextflow.Session - [86/43cb27] Submitted process > HISAT2_ALIGN (1)
+Sep-25 00:00:52.941 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: TRIM_GALORE (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/4c/92039893bd5e5e81dd40d12bc4d4d8]
+Sep-25 00:00:52.992 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:52.992 [Task submitter] INFO  nextflow.Session - [55/101f7e] Submitted process > HISAT2_ALIGN (2)
+Sep-25 00:00:53.845 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: TRIM_GALORE (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/df/529fdccfc05ae86abd67fdf97ea226]
+Sep-25 00:00:53.871 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:53.874 [Task submitter] INFO  nextflow.Session - [72/4324eb] Submitted process > HISAT2_ALIGN (3)
+Sep-25 00:00:55.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: HISAT2_ALIGN (1); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/86/43cb272910157ec115c11a42f47e38]
+Sep-25 00:00:56.117 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FASTQC (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/e6/77e33dfa7fbc9ac0492d9306bb8380]
+Sep-25 00:00:56.623 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: HISAT2_ALIGN (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/55/101f7e39d9359a970cbf6c628ef89e]
+Sep-25 00:00:57.009 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: HISAT2_ALIGN (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/72/4324eb271487681ccdeaa278f4d68e]
+Sep-25 00:00:57.168 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: TRIM_GALORE (2); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/a2/10f72a51c8ee3841987a2ec66cb65f]
+Sep-25 00:00:57.181 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:57.182 [Task submitter] INFO  nextflow.Session - [4a/b540ef] Submitted process > HISAT2_ALIGN (4)
+Sep-25 00:00:57.409 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: TRIM_GALORE (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/f0/30965e40a643ac403f2f64b9066ceb]
+Sep-25 00:00:57.418 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:57.418 [Task submitter] INFO  nextflow.Session - [bb/bc0948] Submitted process > HISAT2_ALIGN (5)
+Sep-25 00:00:57.819 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: TRIM_GALORE (3); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/7b/be62ab1066b4e879585151a8aa95da]
+Sep-25 00:00:57.830 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:57.830 [Task submitter] INFO  nextflow.Session - [9e/42d4dc] Submitted process > HISAT2_ALIGN (6)
+Sep-25 00:00:58.523 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: HISAT2_ALIGN (4); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/4a/b540efed85413d4d16083f555e62a2]
+Sep-25 00:00:58.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: HISAT2_ALIGN (5); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/bb/bc094800fd200a83ea2f23d3888255]
+Sep-25 00:00:59.411 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: HISAT2_ALIGN (6); status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/9e/42d4dc94d996aba716b86a8ef074c0]
+Sep-25 00:00:59.420 [Actor Thread 13] DEBUG nextflow.conda.CondaCache - conda found local env for environment=multiqc=1.31; path=/home/sskoldas/rnaseq-pipeline/work/conda/env-b3712536d9810305685ed0e64cf3c037
+Sep-25 00:00:59.427 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-25 00:00:59.427 [Task submitter] INFO  nextflow.Session - [b4/4d8512] Submitted process > MULTIQC
+Sep-25 00:01:03.341 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: MULTIQC; status: COMPLETED; exit: 0; error: -; workDir: /home/sskoldas/rnaseq-pipeline/work/b4/4d85121140d2b1e9e36055163e390c]
+Sep-25 00:01:03.343 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-25 00:01:03.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-25 00:01:03.443 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-25 00:01:03.447 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Sep-25 00:01:03.448 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Sep-25 00:01:03.462 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=19; failedCount=0; ignoredCount=0; cachedCount=1; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 27s; failedDuration=0ms; cachedDuration=23.2s;loadCpus=0; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=0; ]
+Sep-25 00:01:03.677 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-25 00:01:03.688 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Sep-25 00:01:03.688 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -47,10 +47,12 @@ Single-end data:
 
 ```bash
 nextflow run workflows/rnaseq_se.nf -profile standard
+nextflow run workflows/rnaseq_se.nf -profile docker
 ```
 
 Paired-end data:
 
 ```bash
 nextflow run workflows/rnaseq_pe.nf -profile standard
+nextflow run workflows/rnaseq_pe.nf -profile docker
 ```
